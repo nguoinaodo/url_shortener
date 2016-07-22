@@ -27,7 +27,7 @@ router.use('/new', function(req, res, next) {
                         if (err) throw err;
                         collection.update({_id: 1}, {$set: {count: count}}, function(err) {
                             if (err) throw err;
-                            res.json({original_url: str, short_url: 'https://url-shortener-nguoinaodo.c9users.io/' + count});
+                            res.json({original_url: str, short_url: 'https://url-shortener-nguoinaodo.herokuapp.com/' + count});
                             db.close();
                         });
                     });
